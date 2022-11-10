@@ -1,0 +1,97 @@
+@import url("./css/header.css");
+@import url(./css/nav.css);
+@import url(./css/banner.css);
+@import url(./css/BulletinBoard.css);
+@import url(./css/content.css);
+*{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    font-size: 12px;
+}
+.fixed-nav {
+    position: fixed;
+    bottom: 70px;
+    right: 0;
+    z-index: 99;
+}
+.fixed-nav ul,.fixed-nav ul li{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.fixed-nav ul li {
+    width: 82px;
+    height: 90px;
+    justify-content: center;
+    background-color: white;
+    margin-bottom: 1px;
+    position: relative;
+}
+.fixed-nav ul li img {
+    width: 30px;
+    height: 30px;
+    margin: 18px auto 8px;
+}
+.fixed-nav ul li:nth-of-type(6) {
+    margin-top: 14px;
+    cursor: pointer;
+}
+.fixed-nav ul li:last-of-type {
+    display: none;
+}
+.fixed-nav ul li:hover {
+    color: #ff6700;
+}
+.fixed-nav ul li:first-of-type .qrCode {
+    width: 130px;
+    height: 192px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-110%);
+    background-color: white;
+    padding: 14px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+}
+.fixed-nav ul li:first-of-type:hover .qrCode {
+    transition: visibility 0.5s;
+    visibility: visible;
+}
+
+.fixed-nav ul li:first-of-type .qrCode img {
+    width: 100px;
+    height: 100px;
+    margin: 0;
+}
+.fixed-nav ul li:first-of-type .qrCode span{
+    margin-top: 14px;
+    font-size: 14px;
+    color: black;
+}
+.fixed-nav ul li:first-of-type .qrCode::after {
+    content: "";
+    position: absolute;
+    top: 21%;
+    width: 0;
+    height: 0;
+    right: -18px;
+    border: 10px solid transparent;
+    border-left: 10px solid white;
+    overflow: hidden;
+    z-index: 2;
+}

@@ -1,0 +1,129 @@
+.nav-container {
+    width: 1226px;
+    height: 100px;
+    margin: 0 auto;
+    position: relative;
+    
+}
+.nav {
+    width: 1226px;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav>*,.nav .search .searhc-icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav .logo {
+    position: relative;
+    display: block;
+    width: 56px;
+    height: 56px;
+}
+/* .nav ul {
+
+} */
+.nav ul li {
+    line-height: 100px;
+    font-size: 16px;
+    /* font-weight: normal; */
+    padding: 0 0.5em;
+    cursor: pointer;
+}
+.nav ul li:hover {
+    color: #ff6700;
+    border: none;
+}
+.nav .search{
+    height: 50px;
+}
+.nav .search input {
+    width: 246px;
+    height: 100%;
+    padding: 10px;
+    outline: none;
+}
+/* .nav .search input:focus{
+} */
+.nav .search .searhc-icon {
+    width: 50px;
+    height: 100%;
+    border: 1px solid;
+    box-sizing: border-box;
+    border-left: none;
+    justify-content: center;
+    cursor: pointer;
+}
+.nav .search .searhc-icon img {
+    height: 50%;
+}
+.nav .search .searhc-icon:hover{
+    background-color: #ff6700;
+}
+.nav-active {
+    width: 1226px;
+    height: 229px;
+    box-shadow: 1px 1px 5px gray;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    z-index: 4;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s;
+    background-color: white;
+    /* display: none; */
+    /* visibility: hidden; */
+    /* transition: visibility 0; */
+    /* background-color: yellow; */
+}
+
+.nav-active ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.nav-active ul li {
+    width: calc(100% / 6);
+    height: 100%;
+    position: relative;
+}
+.nav-active ul li a{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.nav-active ul li a>*:not(:last-child){
+    margin-bottom: 5px;
+}
+.nav-active ul li:not(:first-child)::before{
+    position: absolute;
+    left: 0;
+    top: 35px;
+    width: 1px;
+    height: 100px;
+    content: "";
+    background-color: #e0e0e0;
+}
+.nav-active ul li img{
+    width: 160px;
+    height: 110px;
+}
+.nav-active ul li .title {
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 100%;
+}
+.nav-active ul li .price {
+    color: #ff6700;
+}

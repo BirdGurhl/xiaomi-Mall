@@ -1,0 +1,151 @@
+.banner {
+    width: 1226px;
+    height: 460px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.banner .bannerImg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor: pointer;
+    /* transition: opacity 0.8s ease-out; */
+    transition-timing-function: ease-out;
+}
+/* .banner .bannerImg:nth-of-type(3){
+    opacity: 1;
+} */
+.banner .bannerImg img {
+    width: 100%;
+    height: 100%;
+}
+.banner .banner-nav {
+    width: 234px;
+    height: 460px;
+    z-index: 3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* color: #fff; */
+    background: rgba(105,101,101,.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.banner .banner-nav ul,.banner .banner-nav-active ul{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    color: white;
+    font-size: 14px;
+    font-size: 14px;
+}
+.banner .banner-nav ul li,
+.banner .banner-nav ul li a,
+.banner .banner-nav-active ul li,
+.banner .banner-nav-active ul li a{
+    flex: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner .banner-nav ul li a,.banner .banner-nav-active ul li a{
+    padding: 0 10%;
+    height: 100%;
+}
+.banner .banner-nav ul li a:hover{
+    background-color: #ff6700;
+}
+.banner .banner-nav ul li a em{
+    width: 18px;
+    height: 18px;
+    background: url(../images/右箭头.png) no-repeat;
+    background-size: cover;
+}
+.banner .banner-nav-active {
+    position: absolute;
+    z-index: 3;
+    left: 234px;
+    width: calc(1226px - 234px);
+    height: 100%;
+    border: 1px solid black;
+    border-left: none;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    display: none;
+}
+.banner .banner-nav-active ul {
+    flex: 1;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    color: black;
+    font-size: 12px;
+}
+
+.banner .banner-nav-active ul li a{
+    justify-content: flex-start;
+}
+.banner .banner-nav-active ul li a:hover{
+    background-color: lightgray;
+}
+.banner .pre,.banner .next {
+    width: 41px;
+    height: 69px;
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+    transform: translateY(-50%);
+    cursor: pointer;
+    background: url(../images/icon-slides.png) no-repeat;
+}
+.banner .pre {
+    left: 234px;
+    background-position: calc(100% / 3 * 2);
+}
+.banner .next {
+    right: 0;
+    background-position: calc(100% / 3 * 3);
+}
+.banner .pre:hover {
+    background-position: 0;
+}
+.banner .next:hover {
+    background-position: calc(100% / 3 * 1);
+}
+.banner .circle {
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.banner .circle a{
+    width: 6px;
+    height: 6px;
+    border: 2px solid;
+    border-color: hsla(0,0%,100%,.3);
+    border-radius: 100%;
+    overflow: hidden;
+    background: rgba(0,0,0,.4);
+    margin: 0 4px;
+    transition: all 0.3s;
+}
+.banner .circle .active {
+    background: hsla(0,0%,100%,.4);
+    border-color: rgba(0,0,0,.3);
+}

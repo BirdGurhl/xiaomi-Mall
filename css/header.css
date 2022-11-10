@@ -1,0 +1,119 @@
+header{
+    height: 40px;
+    line-height: 40px;
+    background: #333;
+
+}
+header .container {
+    width: 1226px;
+    height: 100%;
+    margin: 0 auto;
+    color: #b0b0b0;
+}
+header .container::after{
+    content: " ";
+    clear: both;
+}
+header .letf{
+    float: left;
+    height: 100%;
+}
+header .right {
+    float: right;
+    height: 100%;
+    display: flex;
+}
+
+header .container a {
+    display: inline-block;
+    height: 100%;
+    text-align: center;
+    position: relative; 
+}
+header .container a:hover {
+    color: white;
+}
+header .container span {
+    margin: 0 2px;
+}
+header .container img {
+    height: 60%;
+    display: inline-block;
+    transform: translateY(20%);
+}
+header .container a .downLoad img{
+    width: 60%;
+}
+header .container .car img {
+    transform:none;
+}
+header .container .car {
+    margin-left: 10px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+header .container .car:hover {
+    background-color: white;
+    color: #ff6700;
+}
+
+header .container a .sanjiaoxing {
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 10px solid transparent;
+    border-bottom: 10px solid white;
+    /* display: none; */
+    visibility: hidden;
+}
+header .container a .downLoad,header .container a .carHover{
+    margin: 0;
+    position: absolute;
+    top: 40px;
+    left: -75%;
+    width: 250%;
+    /* height: 300%; */
+    height: 0;
+    background: white;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    /* display: none; */
+    visibility: hidden;
+    /* transition: all 0.3s; */
+    /* transition: height 0.3s; */
+    border: 1px solid gray;
+    box-shadow: 1px 1px 5px gray;
+    z-index: 3;
+}
+header .container a .downLoad span,header .container a .carHover span{
+    color: initial  ;
+}
+header .container a .carHover{
+    width: 350%;
+    /* height: 250%; */
+    height: 0;
+    left: unset;
+    right: 0;
+    justify-content: center;
+    /* visibility: visible; */
+}
+/* header .container a .carHover ul,header .container a .carHover ul li{
+    display: flex;
+}
+
+header .container a .carHover li span{
+    width: 4px;
+    height: 20px;
+    background-color: #ff6700;
+    margin: 0 2px;
+} */
+
